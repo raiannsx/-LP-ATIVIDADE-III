@@ -2,9 +2,8 @@
 #include <stdlib.h>
 #include <locale.h>
 
-int main()
-{
-    setlocale(LC_ALL, "portuguese");
+int main(){
+    setlocale(LC_ALL, "Portuguese");
 
     char disciplinas[3][200];
     float notas[3][3];
@@ -25,7 +24,7 @@ int main()
         scanf("%d", &idades[i]);
 
         printf("\nInsira o nome da disciplina: ");
-        getchar(); // Limpa o buffer do teclado antes de ler a próxima string
+        getchar();
         fgets(disciplinas[i], sizeof(disciplinas[i]), stdin);
 
         for (j = 0; j < 3; j++)
@@ -39,24 +38,24 @@ int main()
         media[i] = somaNotas / 10;
         somaNotas = 0;
 
-        // Verificação da situação do aluno
+        // VerificaÃ§Ã£o da situaÃ§Ã£o do aluno
         if (media[i] >= 7.0)
         {
-            printf("Situação: Aprovado[3]\n");
+            printf("SituaÃ§Ã£o: Aprovado\n");
         }
         else if (media[i] >= 5.0)
         {
-            printf("Situação: Recuperação[3]\n");
+            printf("SituaÃ§Ã£o: RecuperaÃ§Ã£o\n");
         }
         else
         {
-            printf("Situação: Reprovado[3]\n");
+            printf("SituaÃ§Ã£o: Reprovado\n");
         }
     }
 
     system("cls || clear");
 
-    printf("\nExibindo as informações dos alunos e das disciplinas...\n");
+    printf("\nExibindo as informaÃ§Ãµes dos alunos e das disciplinas...\n");
 
     for (i = 0; i < 3; i++)
     {
@@ -69,8 +68,10 @@ int main()
             printf("Nota %d: %.1f\n", j + 1, notas[i][j]);
         }
 
-        printf("Média: %.1f\n", media[i]);
+        printf("MÃ©dia: %.1f\n", media[i]);
     }
 
     return 0;
 }
+
+
