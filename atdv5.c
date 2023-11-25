@@ -12,7 +12,7 @@ int main() {
     struct Contato agenda[MAX_CONTATOS];
     int opcao;
     int numContatos = 0;
-    int i; // Declare 'i' antes do loop
+    int i; 
 
     do {
         printf("\nSelecione a opcao:\n");
@@ -37,7 +37,7 @@ int main() {
                 break;
 
             case 2:
-                printf("\nNúmeros cadastrados:\n");
+                printf("\nNÃºmeros cadastrados:\n");
                 if (numContatos > 0) {
                     for (i = 0; i < numContatos; i++) { // 'i' declarado aqui
                         printf("Nome: %s, Numero: %s\n", agenda[i].nome, agenda[i].numero);
